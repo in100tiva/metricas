@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Instagram</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body>
+
+
+    <select id="languageSelector" onchange="changeLanguage(this.value)">
+      <option value="pt">Português</option>
+      <option value="en">English</option>
+      <option value="es">Español</option>
+    </select>
+    <h1>Calculadora de Instagram</h1>
+
+    <div>
+      <h2>Taxa de Engajamento</h2>
+      <label id="engagedLabel" for="engaged">Pessoas Engajadas:</label>
+      <input type="number" id="engaged" oninput="validateField(this, 'engagementFeedback')" required="">
+      <span id="engagementFeedback"></span>
+      <label id="reachedLabel" for="reached">Pessoas Alcançadas:</label>
+      <input type="number" id="reached" oninput="validateField(this, 'reachedFeedback')" required="">
+      <span id="reachedFeedback"></span>
+      <button id="calculateEngagementButton" onclick="calculateEngagement()">Calcular Engajamento</button>
+      <p id="engagementResult"></p>
+      <p id="engagementTips"></p>
+    </div>
+    <div>
+      <h2>Taxa de Conversão</h2>
+      <label id="clientsLabel" for="clients">Clientes:</label>
+      <input type="number" id="clients" oninput="validateField(this, 'clientsFeedback')" required="">
+      <span id="clientsFeedback"></span>
+      <label id="leadsLabel" for="leads">Cadastros ou Leads:</label>
+      <input type="number" id="leads" oninput="validateField(this, 'leadsFeedback')" required="">
+      <span id="leadsFeedback"></span>
+      <button id="calculateConversionButton" onclick="calculateConversion()">Calcular Conversão</button>
+      <p id="conversionResult"></p>
+      <p id="conversionTips"></p>
+    </div>
+
+    <script src="script.js"></script>
+
+
+  </body>
+
+</html>
